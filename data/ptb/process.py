@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import cPickle as pickle
+import pickle
 import numpy as np
 
 
@@ -39,7 +39,7 @@ def main():
   print("valid size: {}".format(np.size(x_valid)))
   print("test size: {}".format(np.size(x_test)))
 
-  with open("ptb.pkl", "w") as fout:
+  with open("ptb.pkl", "wb") as fout:
     pickle.dump((x_train, x_valid, x_test, vocab, index), fout, protocol=2)
 
 
