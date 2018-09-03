@@ -208,8 +208,8 @@ def get_ops(x_train, x_valid, x_test):
 def train(mode="train"):
   assert mode in ["train", "eval"], "Unknown mode '{0}'".format(mode)
 
-  with open(FLAGS.data_path) as finp:
-    x_train, x_valid, x_test, _, _ = pickle.load(finp)
+  with open(FLAGS.data_path, 'rb') as finp:
+    x_train, x_valid, x_test, _, _ = pickle.load(finp, encoding='latin1')
     print("-" * 80)
     print("train_size: {0}".format(np.size(x_train)))
     print("valid_size: {0}".format(np.size(x_valid)))
