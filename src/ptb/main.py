@@ -22,6 +22,11 @@ from src.utils import print_user_flags
 from src.ptb.ptb_enas_child import PTBEnasChild
 from src.ptb.ptb_enas_controller import PTBEnasController
 
+try:
+    xrange
+except NameError:
+    xrange = range
+    
 flags = tf.app.flags
 FLAGS = flags.FLAGS
 
