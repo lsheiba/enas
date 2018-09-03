@@ -14,6 +14,11 @@ from src.common_ops import stack_lstm
 
 from tensorflow.python.training import moving_averages
 
+try:
+    xrange
+except NameError:
+    xrange = range
+    
 class PTBEnasController(object):
   def __init__(self,
                rhn_depth=5,
