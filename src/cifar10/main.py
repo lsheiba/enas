@@ -3,7 +3,7 @@ from __future__ import division
 from __future__ import print_function
 
 import os
-import cPickle as pickle
+import pickle
 import shutil
 import sys
 import time
@@ -26,6 +26,11 @@ from src.cifar10.general_child import GeneralChild
 from src.cifar10.micro_controller import MicroController
 from src.cifar10.micro_child import MicroChild
 
+try:
+    xrange
+except NameError:
+    xrange = range
+    
 flags = tf.app.flags
 FLAGS = flags.FLAGS
 
