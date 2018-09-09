@@ -93,6 +93,7 @@ DEFINE_integer("num_epochs", 300, "")
 
 DEFINE_integer("log_every", 50, "How many steps to log")
 DEFINE_integer("eval_every_epochs", 1, "How many epochs to eval")
+DEFINE_boolean("do_nothing", True, "This is the test.")
 
 
 def get_ops(x_train, x_valid, x_test):
@@ -390,7 +391,8 @@ def main(_):
   sys.stdout = Logger(log_file)
 
   utils.print_user_flags()
-  train(mode="train")
+  if FLAGS.do_nothing == False
+    train(mode="train")
 
 
 if __name__ == "__main__":

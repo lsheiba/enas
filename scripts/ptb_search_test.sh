@@ -9,7 +9,7 @@ python src/ptb/main.py \
   --output_dir="/notebooks/training/outputs" \
   --batch_size=20 \
   --child_bptt_steps=35 \
-  --num_epochs=100 \
+  --num_epochs=1 \
   --child_rhn_depth=12 \
   --child_num_layers=1 \
   --child_lstm_hidden_size=720 \
@@ -36,5 +36,6 @@ python src/ptb/main.py \
   --controller_tanh_constant=2.5 \
   --controller_temperature=5.0 \
   --controller_entropy_weight=0.001 \
-  --eval_every_epochs=1
+  --eval_every_epochs=1 \
+  --do_nothing=False
 
